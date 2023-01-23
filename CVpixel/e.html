@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+	<meta charset="utf-8">
+	<meta name="wiewport" content="wigth=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Лоза Елена</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowscroll('#top')">
+		<span>Loza Elena</span>
+		</div>
+		<div id="about">
+	<a href="#" title="Обо мне">Обо мне</a>
+		</div>
+	</header>
+
+	<div id="top">
+		<h1> QA-Engineer</h1>
+		<h3>На связи</h3>
+		<div class="entry">
+          <a href="http://t.me/cshlh" target="_blank"> мой telegram</a>
+        </div>
+        <div class="entry">
+          <a href="mailto:lenaloza@mail.ru">LENALOZA@MAIL.RU</a>
+        </div>
+        <div class="entry">
+          <a href="https://www.linkedin.com/in/elena-loza-912368263/" target="_blank">
+            linkedin
+          </a>
+        </div>
+        <div class="entry">
+          <a href="https://github.com/ElenaLoz" target="_blank">git</a>
+        </div>
+      </div>
+    </div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
+		function slowscroll(id) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function () {
+			if($(window).scrollTop() === 0)
+				$("header").removeclass("fixed");
+			else
+				$("header").attr("class", "fixed");
+		});
+	</script>
+</body>
+</html>
